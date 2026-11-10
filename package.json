@@ -1,0 +1,50 @@
+{
+  "name": "@sudobility/printing_rn",
+  "version": "0.0.1",
+  "description": "React Native printing for @sudobility apps (Skia page render, native print delivery)",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bunx tsc && node scripts/fix-esm-imports.mjs",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "bunx tsc --noEmit",
+    "lint": "bunx eslint src",
+    "lint:fix": "bunx eslint src --fix",
+    "format": "bunx prettier --write \"src/**/*.{ts,tsx,js,jsx,json}\"",
+    "test:unit": "bunx vitest run",
+    "prepublishOnly": "bun run build"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@eslint/js": "~10.0.1",
+    "@types/node": "~26.6.5",
+    "@typescript-eslint/eslint-plugin": "~8.72.0",
+    "@typescript-eslint/parser": "~8.72.0",
+    "eslint": "~10.13.0",
+    "eslint-plugin-prettier": "~5.5.7",
+    "prettier": "~3.9.10",
+    "typescript": "~6.0.3",
+    "vitest": "~4.1.12"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "BUSL-1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sudobility/di_rn.git"
+  }
+}
