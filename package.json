@@ -1,6 +1,6 @@
 {
   "name": "@sudobility/printing_rn",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "React Native printing for @sudobility apps (Skia page render, native print delivery)",
   "type": "module",
   "main": "dist/index.js",
